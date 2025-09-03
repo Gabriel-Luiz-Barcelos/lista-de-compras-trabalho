@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
     container:{
         backgroundColor: "#F2F2F2",
         flex:1,
+        padding:24,
     },
     title:{
         color: '#F2F2F2',
@@ -16,6 +17,7 @@ export const styles = StyleSheet.create({
         justifyContent:"center",
         width:"100%",
         height:173,
+
     },
     input:{
         padding:16,
@@ -23,27 +25,47 @@ export const styles = StyleSheet.create({
         borderRadius:6,
         borderWidth:1,
         borderColor: "#808080",
-        marginLeft:16,
         height:56,
         flex:1
     },
     form:{
         width:"100%",
-        top:-27,
-        flexDirection:"row"
+        top:-50,
+        flexDirection:"row",
+        padding:24
     },
     button:{
-        backgroundColor:"#31C667",
+        padding:16,
         width:56,
         height:56,
         alignItems:"center",
         justifyContent:"center",
         borderRadius:5,
-        marginRight:16
+        marginLeft:5
     },
     textButton:{
         color:"#FFF",
         fontSize:24
-    }
+    },
+    textProducts:{
+        color:'#31C667',
+        fontSize:14,
+        fontWeight:700,
+    },
+    iconsText:{
+        
+        marginTop:-60,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        borderBottomColor:'#808080',
+        borderBottomWidth:1
+    },
+    textFinalizados:{
+        color:'#7A4A9E',
+        fontSize:14,
+        fontWeight:700,
+    },
+  
+
 
 })

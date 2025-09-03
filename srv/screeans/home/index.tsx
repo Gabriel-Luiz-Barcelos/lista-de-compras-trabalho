@@ -1,4 +1,4 @@
-import { View,Text, TextInput, TouchableOpacity } from "react-native";
+import { View,Text, TextInput, TouchableOpacity,Image } from "react-native";
 import { styles } from "./styles";
 import { useState } from "react";
 
@@ -12,6 +12,7 @@ export function Home(){
                 <Text style={styles.title}>Lista de compras </Text>
             </View>
 
+            
             <View style={styles.form}>
                 <TextInput style={styles.input}
                     placeholder="Adicione um novo produto"
@@ -19,9 +20,15 @@ export function Home(){
                     
                 />
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.textButton}>+</Text>
+                    <Image
+                        source={require('../../../assets/images/trash.png')}
+                    />
                 </TouchableOpacity>
             </View>    
+            <View style={styles.iconsText}>
+                <Text style={styles.textProducts}>Produtos </Text>
+                <Text style={styles.textFinalizados}>Finalizados </Text>
+            </View>
             
         </View>
     )
