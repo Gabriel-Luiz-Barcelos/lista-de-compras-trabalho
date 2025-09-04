@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     container:{
         backgroundColor: "#F2F2F2",
         flex:1,
-        padding:24,
+       
     },
     title:{
         color: '#F2F2F2',
@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
         justifyContent:"center",
         width:"100%",
         height:173,
+        padding:24,
 
     },
     input:{
@@ -53,12 +54,14 @@ export const styles = StyleSheet.create({
         fontWeight:700,
     },
     iconsText:{
-        
+        padding:10,
         marginTop:-60,
         flexDirection:'row',
         justifyContent:'space-between',
         borderBottomColor:'#808080',
-        borderBottomWidth:1
+        borderBottomWidth:1,
+        margin:24,
+        backgroundColor:'#b91717'
     },
     textFinalizados:{
         color:'#7A4A9E',

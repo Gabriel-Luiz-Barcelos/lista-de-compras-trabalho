@@ -28,6 +28,9 @@ export function Home(){
             <View style={styles.iconsText}>
                 <Text style={styles.textProducts}>Produtos </Text>
                 <Text style={styles.textFinalizados}>Finalizados </Text>
+                <Image
+                    source={'../'}
+                />
             </View>
             
         </View>
