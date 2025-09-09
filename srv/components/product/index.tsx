@@ -1,15 +1,23 @@
-import { StyleSheet, View, Text } from "react-native"
+import { StyleSheet, View, Text, TouchableOpacity,Image } from "react-native"
 import { styles } from "./styles"
+
+import trash from '../../../assets/images/trash.png';
+
 interface Props{
     name: string;
+    onRemove: () => void;
 }
 
-export function Product(props: Props){
-    props.name
-
+export function Product(props: Props) {
     return(
         <View style={styles.container}>
-            <Text style={styles.container}>{props.name}</Text>
+            <Text>{props.name}</Text>
+            <TouchableOpacity 
+            style={styles.buttonTrash}>
+                <Image
+                source={trash}
+                />
+            </TouchableOpacity>
         </View>
     )
 
