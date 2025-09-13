@@ -1,25 +1,33 @@
-import { StyleSheet, View, Text, TouchableOpacity,Image } from "react-native"
-import { styles } from "./styles"
+import { View, Text, TouchableOpacity, Image, Pressable } from "react-native";
+import { styles } from "./styles";
+import trash from "../../../assets/images/trash.png";
+import circleGreen from "../../../assets/images/cicrclegreen.png";
+import circlePurple from "../../../assets/images/circlepurple.png";
 
-import trash from '../../../assets/images/trash.png';
-
-interface Props{
-    name: string;
-    onRemove: () => void;
+interface Props {
+  name: string;
+  done: boolean;
+  onRemove: () => void;
+  onToggleDone: () => void;
 }
 
-export function Product(props: Props) {
-    return(
-        <View style={styles.container}>
-            <Text>{props.name}</Text>
-            <TouchableOpacity 
-            style={styles.buttonTrash}>
-                <Image
-                source={trash}
-                />
-            </TouchableOpacity>
-        </View>
-    )
+export function Product({ name, done, onRemove, onToggleDone }: Props) {
+  return (
+    <View style={styles.container}>
+      <Pressable onPress={onToggleDone}>
+        <Image
+          source={done ? circlePurple : circleGreen}
+          style={{ width: 24, height: 24 }}
+        />
+      </Pressable>
 
+      <Text style={[styles.name, done && styles.checkedText]}>
+        {name}
+      </Text>
+
+      <TouchableOpacity style={styles.buttonTrash} onPress={onRemove}>
+        <Image source={trash} />
+      </TouchableOpacity>
+    </View>
+  );
 }
-
